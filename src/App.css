@@ -35,6 +35,19 @@ a{
 
 /* === H E A D E R === */
 
+
+/* --- React Router */
+
+.nav-list .active{
+    background-color:var(--white);
+    color: black!important;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+}
+
+/* --- React Router */
+
+
 #Header{
     height: 100px;
     background-color: var(--primary);
@@ -50,7 +63,7 @@ a{
     align-items: center;
 }
 
-.header-main a{
+.header-main .link{
     color: var(--white);
     cursor: pointer;
     transition: all .3s;
@@ -69,15 +82,15 @@ a{
     display: flex;
     gap: 40px;
 }
-.nav-list a{
+.nav-list .link{
     font-size: 21px;
     text-transform: capitalize;
 }
-.header-main a:hover:not(.logo a){
+.header-main .link:hover:not(.logo .link){
     opacity: .8;
 }
 
-.login a{
+.login .link{
     font-size: 17px;
     font-weight: 600;
     text-transform: capitalize;

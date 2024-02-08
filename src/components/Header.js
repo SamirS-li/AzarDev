@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../image/code-svgrepo-com.svg';
 import login from '../image/login-svgrepo-com.svg';
+import {NavLink} from "react-router-dom"
 
 export default function Header() {
     return (
@@ -10,26 +11,26 @@ export default function Header() {
             
             <div className="header-main">
                 <div className="logo">
-                    <a href="#">AzarDev</a><img src={logo} alt="azardev" />
+                    <NavLink to="/" className='link'>AzarDev</NavLink><img src={logo} alt="azardev" />
                 </div>
                 <nav className='nav'>
                     <ul className='nav-list'>
                         <li>
-                            <a href="#">home</a>
+                            <NavLink to="/" className='link'>home</NavLink>
                         </li>
                         <li>
-                            <a href="#">about</a>
+                            <NavLink to="/about" className='link'>about</NavLink>
                         </li>
                         <li>
-                            <a href="#">contact</a>
+                            <NavLink to="/contact" className='link'>contact</NavLink>
                         </li>
                         <li>
-                            <a href="#">blog</a>
+                            <NavLink to="/blog" className='link'>blog</NavLink>
                         </li>
                     </ul>
                 </nav>
                 <div className="login">
-                        <a href="#">login <img src={ login } alt='login'/></a>
+                        <NavLink to="/login" className='link'>login <img src={ login } alt='login'/></NavLink>
                 </div>
                 </div>
             </div>
