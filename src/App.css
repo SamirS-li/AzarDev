@@ -221,15 +221,14 @@ a {
 
 #footer {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    margin-bottom: 20px;
-    bottom: 0;
 }
 
 .footer-main {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .footer-main a {
