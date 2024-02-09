@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Open sans';
+    background-color: var(--secondary);
 }
 
 ul {
@@ -126,12 +127,62 @@ a {
 
 /* === H E A D E R - E N D === */
 
+/* === F O O T E R === */
+
+#footer {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+    bottom: 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main a {
+    font-size: 25px;
+    font-weight: 600;
+    color: #5e768e;
+}
+
+.footer-main span {
+    color: #5e768e;
+}
+
+/* === F O O T E R - E N D === */
+
 
 
 
 
 
 /* /////////////// R E S P O N S I V E \\\\\\\\\\\\\\ */
+
+@media only screen and (max-width:578px) {
+
+    .container{
+        padding: 0 20px;
+    }
+
+    /* - - - - - F O O T E R - - - - - */
+
+    .footer-main a {
+        font-size:19px;
+    }
+
+    .footer-main span {
+        font-size: 15px;
+        text-align: end;
+    }
+
+
+
+    /* - - - - - F O O T E R  E N D- - - - - */
+}
+
 
 @media only screen and (max-width:992px) {
 
@@ -161,7 +212,7 @@ a {
     }
 
     .active-m .mobile {
-        left:0px;
+        left: 0px;
     }
 
     .active-m::before {
@@ -202,7 +253,8 @@ a {
         position: relative;
         z-index: 2;
     }
-    .mobile-bar::after{
+
+    .mobile-bar::after {
         position: absolute;
         content: '';
         top: 0;
