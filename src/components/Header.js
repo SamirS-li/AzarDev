@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import logo from '../image/code-svgrepo-com.svg';
 import login from '../image/login-svgrepo-com.svg';
 import { NavLink } from "react-router-dom"
@@ -10,25 +10,19 @@ export default function Header() {
     const sideBar = (e) => {
         if (headerClass.current.className === 'active-m' && e.target.className !== 'mobile') {
             headerClass.current.className = '';
-            console.log(e.target.className)
 
-            
+
         } else if (headerClass.current.className === '' && e.target.className === 'mobile-bar') {
             headerClass.current.className = 'active-m';
-            console.log('ssss')
-            console.log(e.target)
 
         }
-        
-        // console.log(headerClass.current.className='test')
-        // console.log('ss',headerClass.current.className)
+
+
     }
 
     return (
         <header id='Header' ref={headerClass} onClick={sideBar}>
             <div className="container">
-
-
                 <div className="header-main">
                     <div className="logo">
                         <NavLink to="/" className='link'>AzarDev</NavLink><img src={logo} alt="azardev" />
