@@ -207,7 +207,7 @@ a {
         gap: 40px;
         width: 300px;
         background-color: var(--mobile-sidebar);
-        z-index: 2;
+        z-index: 3;
         transition: left .15s linear;
     }
 
