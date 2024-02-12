@@ -16,8 +16,8 @@ export default function Home() {
               <span>#FrontEnd-Developer #Web-debeloper 🌐</span>
             </p>
             <div className="page-link">
-              <Link to="/about" className="learn-more" href="/about" >Learn more</Link>
-              <Link to="/contact" className="contact-link" href="/contact" >Contact</Link>
+              <Link to="/about" className="learn-more" >Learn more</Link>
+              <Link to="/contact" className="contact-link" >Contact</Link>
             </div>
             <div className="sosial-media">
               <a href="https://www.instagram.com/azarahmadov_/" target='_blank' rel="noreferrer" >
