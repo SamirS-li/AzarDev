@@ -8,6 +8,21 @@ body {
     background-color: var(--secondary);
 }
 
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #34495e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
 ul {
     list-style: none;
 }
@@ -34,7 +49,9 @@ a {
     width: 100%;
     padding: 0 30px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* === H E A D E R === */
@@ -131,46 +148,45 @@ a {
 
 /* === H O M E === */
 
-#Home{
-    display: flex;
-}
 
 
-.home-main{
+.home-main {
     display: flex;
     justify-content: space-between;
 }
+
 /* ------ home iinfo (left) */
 
-.home-info{
+.home-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%     ;
+    width: 100%;
 }
 
-.home-title{
+.home-title {
     font-size: 65px;
     line-height: 80px;
     color: var(--white);
 
 }
 
-.home-text{
+.home-text {
     font-size: 19px;
     line-height: 30px;
     font-weight: 500;
     color: #ffffffda;
     padding: 25px 0;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.home-text span{
+.home-text span {
     margin-top: 10px;
 }
 
-.learn-more , .contact-link{
+.learn-more,
+.contact-link {
     display: inline-block;
     padding: 13px 20px;
     border-radius: var(--border-radius);
@@ -178,21 +194,21 @@ a {
     margin-right: 15px;
 }
 
-.learn-more{
+.learn-more {
     color: var(--white);
     background-color: #5f9212;
 }
 
-.contact-link{
+.contact-link {
     background-color: var(--white);
     color: black;
 }
 
-.sosial-media{
+.sosial-media {
     margin: 35px 0 15px;
 }
 
-.sosial-media svg{
+.sosial-media svg {
     fill: var(--white);
     width: 35px;
     height: 35px;
@@ -201,11 +217,12 @@ a {
 
 /* --------- home image (right) */
 
-.home-image{
+.home-image {
     height: 550px;
     width: 100%;
 }
-.home-image img{
+
+.home-image img {
     width: 100%;
     height: 100%;
 }
@@ -215,7 +232,87 @@ a {
 
 /* === H O M E - E N D === */
 
+/* === A B O U T === */
 
+/* :::::: ------- hover ------ :::::: */
+
+
+.about-counts>li:hover {
+    background-color: var(--lightGreen);
+    transform: scale(1.1);
+}
+
+.about-counts>li:hover span {
+    color: var(--white);
+}
+
+/* :::::: ------- hover ------ :::::: */
+
+.about-main {
+    display: flex;
+}
+
+.about-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-info-header {
+    color: var(--lightGreen);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.about-info-title {
+    color: var(--white);
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.about-info-text {
+    color: #ffffffda;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+.about-counts {
+    display: flex;
+}
+
+.about-counts>li {
+    border: 1px solid #5f921236;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all .3s;
+    margin-right: 20px;
+}
+
+.about-counts span {
+    color: var(--lightGreen);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.about-counts p {
+    color: #ffffffda;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 550px;
+}
+
+/* === A B O U T - E N D === */
 
 /* === F O O T E R === */
 
@@ -336,31 +433,31 @@ a {
 
     /* - - - - H O M E - - - - */
 
-    .home-main{
+    .home-main {
         flex-direction: column;
     }
 
-    .home-info{
+    .home-info {
         align-items: center;
     }
 
-    .home-title{
+    .home-title {
         width: 200px;
     }
 
-    .home-text{
+    .home-text {
         text-align: center;
     }
 
 
 
-    .home-image{
+    .home-image {
         display: flex;
         justify-content: center;
         height: 400px;
     }
 
-    .home-image img{
+    .home-image img {
         max-width: 400px;
         width: 100%;
     }
@@ -368,6 +465,21 @@ a {
 
 
     /* - - - - H O M E  E N D - - - - */
+
+
+    /* - - - - A B O U T - - - - */
+
+    .about-main {
+        flex-direction: column;
+    }
+
+
+
+    .about-image img {
+        height: 330px;
+    }
+
+    /* - - - - A B O U T  E N D - - - - */
 
 
 
@@ -378,29 +490,64 @@ a {
 
 @media only screen and (max-width:578px) {
 
-    .container{
+    .container {
         padding: 0 20px;
     }
 
 
 
-    
+
     /* - - - - - H O M E - - - - - */
 
-    .home-image img{
+    .home-image img {
         max-width: 350px;
     }
 
-    
+
 
     /* - - - - - H O M E  E N D- - - - - */
+
+
+    /* - - - - - A B O U T - - - - - */
     
+    .about-info{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .about-info-header{
+        font-size: 25px;
+    }
+
+    .about-info-title{
+        font-size: 18px;
+    }
+
+    .about-info-text{
+        font-size: 15px;
+    }
+
+    .about-counts>li{
+        padding: 10px;
+    }
+
+    .about-counts span{
+        font-size: 18px;
+    }
+
+    .about-counts p{
+        font-size: 13px;
+        line-height: 24px;
+    }
     
-    
+    /* - - - - - A B O U T  E N D- - - - - */
+
+
+
     /* - - - - - F O O T E R - - - - - */
 
     .footer-main a {
-        font-size:19px;
+        font-size: 19px;
     }
 
     .footer-main span {
