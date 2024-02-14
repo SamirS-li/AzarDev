@@ -314,6 +314,75 @@ a {
 
 /* === A B O U T - E N D === */
 
+
+/* === C O N T A C T === */
+
+  #Contact {
+      padding-bottom: 10px;
+  }
+
+.contact-main {
+    display: flex;
+}
+
+
+
+.contact-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 500px;
+}
+
+.contact-form-div {
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+textarea {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--formColor);
+    border: 1px solid #50cf5235;
+    color: var(--white);
+    resize: none;
+    outline: 0;
+}
+
+.contact-form button {
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 5px;
+    background: var(--lightGreen);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact-form button:hover {
+    opacity: .9;
+}
+
+.contact-form input::placeholder,
+textarea::placeholder {
+    color: var(--white);
+}
+
+/* === C O N T A C T - E N D === */
+
 /* === F O O T E R === */
 
 #footer {
@@ -482,6 +551,16 @@ a {
     /* - - - - A B O U T  E N D - - - - */
 
 
+    /* - - - - C O N T A C T  E N D - - - - */
+
+
+    .contact-image img {
+        height: 330px;
+    }
+
+    /* - - - - C O N T A C T  E N D - - - - */
+
+
 
 
 }
@@ -491,7 +570,7 @@ a {
 @media only screen and (max-width:578px) {
 
     .container {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
 
@@ -509,39 +588,58 @@ a {
 
 
     /* - - - - - A B O U T - - - - - */
-    
-    .about-info{
+
+    .about-info {
         text-align: center;
         margin-top: 20px;
     }
 
-    .about-info-header{
+    .about-info-header {
         font-size: 25px;
     }
 
-    .about-info-title{
+    .about-info-title {
         font-size: 18px;
     }
 
-    .about-info-text{
+    .about-info-text {
         font-size: 15px;
     }
 
-    .about-counts>li{
+    .about-counts>li {
         padding: 10px;
     }
 
-    .about-counts span{
+    .about-counts span {
         font-size: 18px;
     }
 
-    .about-counts p{
+    .about-counts p {
         font-size: 13px;
         line-height: 24px;
     }
-    
+
     /* - - - - - A B O U T  E N D- - - - - */
 
+
+    /* - - - - C O N T A C T  - - - - */
+
+
+    .contact-main {
+        flex-direction: column;
+    }
+
+    .contact-image img{
+        height: 250px;
+        padding: 20px 0;
+    }
+
+    .contact-form button{
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    /* - - - - C O N T A C T  E N D - - - - */
 
 
     /* - - - - - F O O T E R - - - - - */
