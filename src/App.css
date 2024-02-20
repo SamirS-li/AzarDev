@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+.App {
+    position: relative;
+
+    min-height: 100vh;
+}
+
 body {
     font-family: 'Open sans';
     background-color: var(--secondary);
@@ -50,6 +56,10 @@ a {
     padding: 0 30px;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+.container:not(#Header .container, #footer .container) {
+    padding-bottom: 50px;
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -317,9 +327,9 @@ a {
 
 /* === C O N T A C T === */
 
-  #Contact {
-      padding-bottom: 10px;
-  }
+#Contact {
+    padding-bottom: 10px;
+}
 
 .contact-main {
     display: flex;
@@ -383,12 +393,172 @@ textarea::placeholder {
 
 /* === C O N T A C T - E N D === */
 
+
+/* === L O G I N === */
+
+.login-div {
+    max-width: 500px;
+    width: 100%;
+    margin: 100px auto 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.login-div input {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--formColor);
+    border: 1px solid #50cf5235;
+    outline: 0;
+    color: var(--white);
+}
+
+
+.login-div input::placeholder,
+button::placeholder {
+    color: var(--white);
+}
+
+
+
+
+
+.login-div button {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--lightGreen);
+}
+
+.login-div>button {
+    background-color: black;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.button-gh svg {
+    margin-left: 10px;
+}
+
+
+.login-div button:hover {
+    opacity: .9;
+}
+
+.login-register {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-register a {
+    margin-left: 5px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* === L O G I N - E N D === */
+
+
+/* === R E G I S T E R === */
+
+.register-main {
+    display: flex;
+}
+
+
+
+.register-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.register-image img {
+    object-fit: contain;
+    width: 100%;
+    height: 500px;
+}
+
+.register-form-div {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-form input {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--formColor);
+    border: 1px solid #50cf5235;
+    color: var(--white);
+    resize: none;
+    outline: 0;
+}
+
+.register-form button {
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 5px;
+    background: var(--lightGreen);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.register-form button:hover {
+    opacity: .9;
+}
+
+.register-form input::placeholder,
+textarea::placeholder {
+    color: var(--white);
+}
+
+.register-login-link {
+    display: block;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.register-login-link span {
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* === R E G I S T E R - E N D === */
+
+
+
 /* === F O O T E R === */
 
 #footer {
     display: flex;
-    position: absolute;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer-main {
@@ -561,6 +731,32 @@ textarea::placeholder {
     /* - - - - C O N T A C T  E N D - - - - */
 
 
+    /* - - - - L O G I N - - - - */
+
+    .login-div {
+        margin: 50px auto 10px;
+    }
+
+    /* - - - - L O G I N  E N D - - - - */
+
+
+    /* === R E G I S T E R === */
+
+    .register-main {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .register-form-div {
+        max-width: 400px;
+        margin-top: 20px;
+    }
+
+    .register-image img {
+        height: 250px;
+    }
+
+    /* === R E G I S T E R - E N D === */
 
 
 }
@@ -629,17 +825,44 @@ textarea::placeholder {
         flex-direction: column;
     }
 
-    .contact-image img{
+    .contact-image img {
         height: 250px;
         padding: 20px 0;
     }
 
-    .contact-form button{
+    .contact-form button {
         font-size: 18px;
         padding: 10px 0;
     }
 
     /* - - - - C O N T A C T  E N D - - - - */
+
+
+    /* - - - - C O N T A C T  E N D - - - - */
+
+    .login-div button {
+        padding: 10px;
+    }
+
+    /* - - - - C O N T A C T  E N D - - - - */
+
+
+    /* - - - - L O G I N - - - - */
+
+    .login-div {
+        margin: 20px auto 10px;
+    }
+
+    /* - - - - L O G I N  E N D - - - - */
+
+
+    /* === R E G I S T E R === */
+
+    .register-form button {
+        padding: 10px;
+    }
+
+    /* === R E G I S T E R - E N D === */
 
 
     /* - - - - - F O O T E R - - - - - */
